@@ -1,12 +1,10 @@
 function makanTerusRekursif(waktu) {
-  function times(waktu,counter) {
-    if(waktu < 1) {
-      return 0
-    } else {
-      return counter + times(waktu - 15,counter)
-    }
+  var counter = 1
+  if (waktu < 1) {
+    return 0
+  } else {
+    return counter + makanTerusRekursif(waktu - 15)
   }
-  return times(waktu,1)
 }
 
 // TEST CASES
